@@ -1,0 +1,28 @@
+/** hide the partyparrot in reactions. */
+body.hide_parrot span[data-emoji*='parrot'] span {
+    background-image: none !important;
+}
+
+/** replace all partyparrots emojis in messages with an empty box, so users can hover over to see name of emoji. */
+body.hide_parrot span.message_body span[title*='parrot'] {
+    background-image: none !important;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+}
+
+
+/**body {
+  background-color: lightblue !important;
+}*/
+
+
+/** hide the partyparrot in reactions. */
+body.hide_all span[data-emoji] span {
+    background-image: none !important;
+}
+/** replace all emojis in messages with an empty box, so users can hover over to see name of emoji. */
+body.hide_all span.message_body span[title] {
+    background-image: none !important;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+}

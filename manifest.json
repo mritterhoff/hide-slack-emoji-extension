@@ -1,0 +1,34 @@
+/* https://developer.chrome.com/extensions/manifest */
+  /*https://developer.chrome.com/extensions/browserAction */
+{
+  "manifest_version": 2,
+  "name": "Hide Slack Emojis",
+  "description": "Because 'party parrot' is an abomination",
+  "version": "0.1.0",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "http://*.slack.com/*", "https://*.slack.com/*"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Hide Slack Emojis - Options",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["background.js", "thirdparty/jquery-2.2.3.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*.slack.com/*", "https://*.slack.com/*"],
+      "css": ["content.css"],
+      "js": ["thirdparty/jquery-2.2.3.js", "content.js"]
+    }
+  ]
+}
