@@ -1,29 +1,13 @@
 <!doctype html>
 <html>
   <head>
-    <title>Hide Slack Gifs Options</title>
-    <style>
-      body {
-        font-family: sans-serif;
-      }
-      label {
-        display: block;
-      }
-
-      h3 {
-        white-space: nowrap;
-      }
-
-      input[type="radio"] {
-        margin-top: 0;
-        vertical-align: middle;
-      }
-
-    </style>
+    <title>Hide Slack Emoji - Options</title>
+    <script src='/thirdparty/jquery-2.2.3.js'></script>
+    <script src='/js/popup.js'></script>
+    <link rel="stylesheet" href="/css/popup.css">
   </head>
   <body>
-    <h3>Hide Slack Gifs - Options</h3>
-
+    <h3>Hide Slack Emoji - Options</h3>
     <form name="options">
       <label for='hide_none'><input id='hide_none' type='radio' name='options' value='hide_none'>Hide nothing</label>
       <br>
@@ -32,9 +16,5 @@
       <label for='hide_all'><input id='hide_all' type='radio' name='options' value='hide_all'>Hide all slack emojis</label>
       <br>
     </form>
-
-    <!-- TODO add a link here to my github to open an issue for new features -->
-
-    <script src='popup.js'></script>
   </body>
 </html>

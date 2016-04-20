@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+}
+label {
+  display: block;
+}
+
+h3 {
+  white-space: nowrap;
+}
+
+input[type="radio"] {
+  margin-top: 0;
+  vertical-align: middle;
+}
